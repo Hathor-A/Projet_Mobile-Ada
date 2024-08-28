@@ -14,9 +14,15 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+                .padding()
         }
-        .padding()
-    }
+            Image(systemName: "book")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+                .padding()
+            Text("Hello, world!")
+            .padding()
+        }
 }
 
 #Preview {

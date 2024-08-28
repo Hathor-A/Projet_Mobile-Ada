@@ -11,7 +11,7 @@ import SwiftUI
 struct Projet_Mobile_SwiftApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SignIn()
         }
     }
 }
