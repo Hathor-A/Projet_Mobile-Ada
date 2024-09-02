@@ -86,7 +86,7 @@ struct ModaleInscription: View {
             .border(Color.black)
             .presentationDetents([.height (310),.medium, .large])
             .presentationDragIndicator(.automatic)
-            .fullScreenCover(isPresented: $contentDisplay, content: ContentView.init)
+            .sheet(isPresented: $contentDisplay, content: ContentView.init)
         }
     }
 }

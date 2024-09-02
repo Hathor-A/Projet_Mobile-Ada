@@ -50,11 +50,14 @@ struct SignIn: View {
                 .padding(.bottom, 180)
                 .presentationDetents([.height (310),.medium, .large])
                 .presentationDragIndicator (.automatic)
-                .fullScreenCover(isPresented: $signInModale, content:ModaleInscription.init)
+                .sheet(isPresented: $signInModale, content:ModaleInscription.init)
                 
             }
-        }
+       
     }
+    
+}
+    
 
 #Preview {
     SignIn()

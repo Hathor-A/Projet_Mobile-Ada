@@ -1,5 +1,5 @@
 //
-//  Alimentation.swift
+//  Home.swift
 //  Projet_Mobile_Swift
 //
 //  Created by Cédric Galais on 30/08/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Alimentation: View {
+struct Accueil: View {
     
     var body: some View {
         
@@ -17,5 +17,5 @@ struct Alimentation: View {
 }
     
     #Preview {
-        Alimentation()
+        Accueil()
     }
