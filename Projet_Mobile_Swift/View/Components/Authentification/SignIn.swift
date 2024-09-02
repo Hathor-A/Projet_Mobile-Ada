@@ -13,7 +13,7 @@ struct SignIn: View {
     var body: some View {
             VStack{
                 VStack {
-                    Image("imagelivres")
+                    Image("ImageNature")
                         .resizable()
                         .frame(width: 550,height: 500)
                         .ignoresSafeArea()
@@ -60,3 +60,34 @@ struct SignIn: View {
     SignIn()
 }
 
+//import SwiftUI
+//
+//struct ContentView: View {
+//    @State private var showModal = false
+//    var body: some View {
+//        VStack {
+//            Button("Show Mini Modal") {
+//                showModal = true
+//            }
+//        }
+//        .sheet(isPresented: $showModal) {
+//            MiniModalView()
+//                .presentationDetents([.fraction(0.3)]) // Définit la taille de la modale
+//                .presentationDragIndicator(.visible) // Ajoute un indicateur de glissement
+//        }
+//    }
+//}
+//struct MiniModalView: View {
+//    var body: some View {
+//        VStack {
+//            Text("This is a mini modal!")
+//                .font(.headline)
+//                .padding()
+//            Button("Close") {
+//                // Action pour fermer la modale
+//            }
+//        }
+//        .frame(maxWidth: .infinity) // Ajuste la largeur de la modale
+//        .padding() // Ajoute du padding pour éviter que le contenu touche les bords
+//    }
+//}
