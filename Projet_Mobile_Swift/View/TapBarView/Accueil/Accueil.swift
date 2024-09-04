@@ -12,25 +12,30 @@ struct Accueil: View {
     var body: some View {
         
         ScrollView() {
-            
             ZStack() {
-                
-                VStack(alignment: .leading){
-                    SearchView()
+                VStack(alignment: .center){
+                    Image("recettes-orientales-classiques")
+                        .frame(width: 550,height: 500)
+                        .ignoresSafeArea()
+                    
                     Text("Exercices du moment")
                         .padding()
                         .fontWeight(.bold)
                         .font(.title2)
                     
-                    Text("Ciations Populaire")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .padding()
-                    
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                    
+                    VStack(alignment: .center){
+                        Image("Cuisine-orientale")
+                            .frame(width: 550,height: 500)
+                            .ignoresSafeArea()
+                        
+                        Text("Recette Populaire")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .padding()
+                        
+                    }
+                    .padding()
                 }
-                .padding(.leading, 5)
             }
         }
     }

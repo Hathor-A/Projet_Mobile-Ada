@@ -11,7 +11,19 @@ struct Alimentation: View {
     
     var body: some View {
         
-        ZStack() {
+        ScrollView {
+            VStack() {
+                Image("recettes-orientales-classiques")
+                    .resizable()
+                    .frame(width: 550,height: 500)
+                    .ignoresSafeArea()
+            }
+            ZStack() {
+                Text("Alimentation")
+                    .font(.largeTitle)
+                    .foregroundColor(.blue)
+                    .padding()
+            }
         }
     }
 }
