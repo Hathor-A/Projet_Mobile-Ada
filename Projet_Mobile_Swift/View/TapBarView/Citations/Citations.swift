@@ -55,9 +55,12 @@ struct Citations: View {
                 Text(citations[currentIndex])
                     .font(.title)
                     .padding()
-                    .multilineTextAlignment(.center) // Centrer le texte s'il est sur plusieurs lignes
+                    .multilineTextAlignment(.center)
+                    .frame(width: 230)// Centrer le texte s'il est sur plusieurs lignes
                     
                     .lineLimit(nil) // Permet au texte de s'étendre sur plusieurs lignes
+                    .fontWeight(.semibold)
+                   
                 
                 Button(action: {
                     if currentIndex < citations.count - 1 {
