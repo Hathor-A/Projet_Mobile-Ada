@@ -11,10 +11,31 @@ struct Accueil: View {
     
     var body: some View {
         
-        ZStack() {
+        ScrollView() {
+            
+            ZStack() {
+                
+                VStack(alignment: .leading){
+                    SearchView()
+                    Text("Exercices du moment")
+                        .padding()
+                        .fontWeight(.bold)
+                        .font(.title2)
+                    
+                    Text("Ciations Populaire")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding()
+                    
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                    
+                }
+                .padding(.leading, 5)
+            }
         }
     }
 }
+        
     
     #Preview {
         Accueil()

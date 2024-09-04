@@ -81,7 +81,7 @@ struct ModaleInscription: View {
                     .foregroundStyle(.black)
             }
             .padding()
-            .frame(width: 300, height: 48)
+            .frame(width: 300, height: 55)
             .foregroundColor(.black)
             .border(Color.black)
             .presentationDetents([.height (310),.medium, .large])

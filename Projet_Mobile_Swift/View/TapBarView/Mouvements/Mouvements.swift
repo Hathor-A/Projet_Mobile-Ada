@@ -11,11 +11,23 @@ struct Mouvements: View {
     
     var body: some View {
         
-        ZStack() {
+        ScrollView {
+            VStack() {
+                Image("Mouvements")
+                    .resizable()
+                    .frame(width: 550,height: 500)
+                    .ignoresSafeArea()
+            }
+            ZStack() {
+                Text("Mouvements!")
+                    .font(.largeTitle)
+                    .foregroundColor(.blue)
+                    .padding()
+            }
         }
     }
 }
-    
-    #Preview {
-        Mouvements()
-    }
+
+#Preview {
+    Mouvements()
+}

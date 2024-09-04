@@ -15,7 +15,7 @@ struct Alimentation: View {
         }
     }
 }
-    
-    #Preview {
-        Alimentation()
-    }
+
+#Preview {
+    Alimentation()
+}
