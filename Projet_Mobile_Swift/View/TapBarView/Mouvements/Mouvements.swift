@@ -11,18 +11,35 @@ struct Mouvements: View {
     
     var body: some View {
         
-        ScrollView {
+        ZStack{
+            Color("BackgroundColor")
+                .ignoresSafeArea()
+            
+           
+                
+            
             VStack() {
-                Image("Mouvements")
-                    .resizable()
-                    .frame(width: 550,height: 500)
-                    .ignoresSafeArea()
-            }
-            ZStack() {
-                Text("Mouvements!")
-                    .font(.largeTitle)
-                    .foregroundColor(.blue)
+                Spacer()
+                
+                Text("C'EST PARTI POUR TON EXERCICE DU JOUR !")
+                    .multilineTextAlignment(.center)
+                    .font(.title)
+                    .foregroundColor(Color("TextColor"))
+                    .bold()
+                
                     .padding()
+                
+                Image("exercice")
+                    .resizable()
+                    .frame(width: 350,height: 350)
+                    
+                Spacer()
+                
+                Image("decompte")
+                    .resizable()
+                    .frame(width: 150,height: 150)
+                
+                Spacer()
             }
         }
     }

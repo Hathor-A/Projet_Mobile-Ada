@@ -16,17 +16,24 @@ struct ContentView: View {
             ZStack {
                 
                 TabView {
+                    
+                    ModaleInscription()
+                        .tabItem {
+                            Label("Connexion", systemImage: "person.crop.circle")
+                        }
+                    
+                    
                     Accueil()
                         .tabItem {
                             Label("Accueil", systemImage: "house")
                         }
                     Mouvements()
                         .tabItem {
-                            Label("Mouvements", systemImage:  "bolt.heart.fill")
+                            Label("Exercice", systemImage:  "bolt.heart.fill")
                         }
                     Alimentation()
                         .tabItem {
-                            Label("Alimentation", systemImage: "fork.knife.circle")
+                            Label("Recette", systemImage: "fork.knife.circle")
                         }
                     Citations()
                         .tabItem {

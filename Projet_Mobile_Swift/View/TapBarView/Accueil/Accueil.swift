@@ -11,35 +11,36 @@ struct Accueil: View {
     
     var body: some View {
         
-        ScrollView() {
+        //ScrollView() {
             ZStack() {
-                VStack(alignment: .center){
-                    Image("recettes-orientales-classiques")
-                        .frame(width: 550,height: 500)
-                        .ignoresSafeArea()
-                    
-                    Text("Exercices du moment")
-                        .padding()
+                
+                Color("BackgroundColor")
+                    .ignoresSafeArea()
+
+    
+                VStack{
+                    Spacer()
+
+                    Text(" Il est temps de se Reconnecter !")
+                        .font(.title)
                         .fontWeight(.bold)
-                        .font(.title2)
+                        .foregroundColor(Color("TextColor"))
+                        .multilineTextAlignment(.center)
                     
-                    VStack(alignment: .center){
-                        Image("Cuisine-orientale")
-                            .frame(width: 550,height: 500)
-                            .ignoresSafeArea()
-                        
-                        Text("Recette Populaire")
-                            .font(.title2)
-                            .fontWeight(.bold)
-                            .padding()
-                        
+                    Image("Adventure")
+                        .padding()
+                     Spacer()
+                    
+                }
+               
+                
                     }
-                    .padding()
+                    
                 }
             }
-        }
-    }
-}
+        
+    
+
         
     
     #Preview {

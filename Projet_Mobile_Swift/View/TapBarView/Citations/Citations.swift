@@ -60,6 +60,7 @@ struct Citations: View {
                     
                     .lineLimit(nil) // Permet au texte de s'étendre sur plusieurs lignes
                     .fontWeight(.semibold)
+                    .foregroundColor(Color("TextColor"))
                    
                 
                 Button(action: {
@@ -79,6 +80,7 @@ struct Citations: View {
                 .resizable()
                 .scaledToFill()
                 .opacity(0.4)
+               
         }
         .padding()
     }

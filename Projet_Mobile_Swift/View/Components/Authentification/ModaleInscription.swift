@@ -8,87 +8,95 @@ import SwiftUI
 
 struct ModaleInscription: View {
     
-    @Environment(\.dismiss) private var dismiss
     @State private var contentDisplay: Bool = false
     
     var body: some View {
-        VStack {
-            HStack {
-                Spacer()
+        
+        ZStack{
+            Color("BackgroundColor")
+                .ignoresSafeArea()
+            VStack {
+                Image("logoApp")
+                    .frame(width: 300, height: 300)
+                    .padding(.leading, 25)
                 
-                Text("Se connecter")
-                    .foregroundStyle(.secondary)
+                Text("Votre coach bien être")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(Color("TextColor"))
                 
-                Spacer()
+                Text("1 motivation, 1 exercice, 1 recette")
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color("TextColor"))
                 
-                Button {
-                    dismiss()
-                } label: {
-                    Image(systemName: "xmark")
-                        .foregroundColor(.secondary)
-                        .foregroundStyle(.secondary)
-                }
-                
-            }
-            .frame(width: 300)
-            .padding()
-            Button {
-                
-            } label : {
+                Text("pour bien commencer votre journée !")
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color("TextColor"))
                 
                 HStack {
-                    Image("googleicon")
+                    Spacer()
+                }
+                .frame(width: 300)
+                .padding()
+                Button {
+                    
+                } label : {
+                    
+                    HStack {
+                        Image("googleicon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 16)
+                        
+                        
+                        Text("Continuer avec Google")
+                            .foregroundStyle(.black)
+                    }
+                }
+                .padding()
+                .frame(width: 300)
+                .foregroundColor(.black)
+                .border(Color.black)
+                
+                
+                Button {
+                    
+                } label: {
+                    Image("facebookicon")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 16)
                     
-                    
-                    Text("Continuer avec Google")
+                    Text("Continuer avec Facebook")
                         .foregroundStyle(.black)
                 }
-            }
-            .padding()
-            .frame(width: 300)
-            .foregroundColor(.black)
-            .border(Color.black)
-            
-            
-            Button {
+                .padding()
+                .frame(width: 300)
+                .foregroundColor(.black)
+                .border(Color.black)
                 
-            } label: {
-                Image("facebookicon")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 16)
-                
-                Text("Continuer avec Facebook")
-                    .foregroundStyle(.black)
+                Button {
+                    contentDisplay.toggle()
+                } label: {
+                    Image("appleicon")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 16)
+                    
+                    Text("Continuer avec Apple")
+                        .foregroundStyle(.black)
+                }
+                .padding()
+                .frame(width: 300, height: 55)
+                .foregroundColor(.black)
+                .border(Color.black)
+                .presentationDetents([.height (310),.medium, .large])
+                .presentationDragIndicator(.automatic)
+                .sheet(isPresented: $contentDisplay, content: SignIn.init)
             }
-            .padding()
-            .frame(width: 300)
-            .foregroundColor(.black)
-            .border(Color.black)
-            
-            Button {
-                contentDisplay.toggle()
-            } label: {
-                Image("appleicon")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 16)
-                
-                Text("Continuer avec Apple")
-                    .foregroundStyle(.black)
-            }
-            .padding()
-            .frame(width: 300, height: 55)
-            .foregroundColor(.black)
-            .border(Color.black)
-            .presentationDetents([.height (310),.medium, .large])
-            .presentationDragIndicator(.automatic)
-            .sheet(isPresented: $contentDisplay, content: ContentView.init)
         }
     }
+    
 }
 
 #Preview {
